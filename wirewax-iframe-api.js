@@ -55,6 +55,8 @@
         '4k': '4k'
     };
 
+    window.wirewax.debug = true;
+
     var subscriptions = {};
     var subscriberNumber = 0;
 
@@ -114,7 +116,6 @@
             if(data.name === listenerName) {
                 if(subscriptions[listenerName]) {
                     for(var i = 0; i < subscriptions[listenerName].length; i++) {
-                        log("player triggered", data);
                         subscriptions[listenerName][i](event.data);
                     }
                 }

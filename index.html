@@ -12,6 +12,7 @@
     <iframe src="http://localhost:3000/8152632" width="100%" height="500px" id="wirewax-player"></iframe>
     <!-- <iframe src="https://embed.wirewax.com/8157657" width="100%" height="500px" id="wirewax-player"></iframe> -->
     <ul>
+        <li><a href="#" id="ready" onclick="playerReady()">Is Player Ready</a></li>
         <li><a href="#" id="play" onclick="playVideo()">Play</a></li>
         <li><a href="#" id="pause" onclick="pauseVideo()">Pause</a></li>
         <li><a href="#" id="seek" onclick="seekVideo()">Seek</a></li>
@@ -20,7 +21,7 @@
         <li><a href="#" id="closeOverlay" onclick="closeOverlay()">Close Tag</a></li>
         <li><a href="#" id="getCurrentTime" onclick="getCurrentTime()">Get Current Time</a></li>
         <li><a href="#" id="changeVolume" onclick="changeVolume(0.25)">Change Volume</a></li>
-        <li><a href="#" id="changeVolume1" onclick="changeVolume(100)">100% Volume</a></li>
+        <li><a href="#" id="changeVolume1" onclick="changeVolume(1)">100% Volume</a></li>
         <li><a href="#" id="toggleMute" onclick="toggleMute()">Toggle Mute</a></li>
         <li>
           <select id="rendition" onchange="changeRendition()">
