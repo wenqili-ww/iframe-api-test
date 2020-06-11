@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script type="text/javascript" src="wirewax-iframe-api.js"></script>
-</head>
-<body>
-    <h1>iframe API test</h1>
-    <iframe src="http://localhost:3000/8152632" width="100%" height="500px" id="wirewax-player"></iframe>
-    <!-- <iframe src="https://embed.wirewax.com/8157657" width="100%" height="500px" id="wirewax-player"></iframe> -->
-    <ul>
-        <li><a href="#" id="ready" onclick="playerReady()">Is Player Ready</a></li>
-        <li><a href="#" id="play" onclick="playVideo()">Play</a></li>
-        <li><a href="#" id="pause" onclick="pauseVideo()">Pause</a></li>
-        <li><a href="#" id="seek" onclick="seekVideo()">Seek</a></li>
-        <li><a href="#" id="gotoTag" onclick="goToTag()">Go To Tag</a></li>
-        <li><a href="#" id="openTag" onclick="openTag()">Open Tag</a></li>
-        <li><a href="#" id="closeOverlay" onclick="closeOverlay()">Close Tag</a></li>
-        <li><a href="#" id="getCurrentTime" onclick="getCurrentTime()">Get Current Time</a></li>
-        <li><a href="#" id="changeVolume" onclick="changeVolume(0.25)">Change Volume</a></li>
-        <li><a href="#" id="changeVolume1" onclick="changeVolume(1)">100% Volume</a></li>
-        <li><a href="#" id="toggleMute" onclick="toggleMute()">Toggle Mute</a></li>
-        <li>
-          <select id="rendition" onchange="changeRendition()">
-            <option value="360">360</option>
-            <option value="540">540</option>
-            <option value="720">720</option>
-            <option value="1080">1080</option>
-            <option value="4k">4k</option>
-          </select>
 
-        </li>
-      </ul>
-      <script src="index.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="wirewax-iframe-api.js"></script>
+</head>
+
+<body>
+  <h1>iframe API test</h1>
+  <iframe allowfullscreen src="http://localhost:3100/?vidId=8175508" width="100%" height="500px" id="wirewax-player"></iframe>
+  <!-- <iframe allowfullscreen src="http://localhost:3002/8175508" width="100%" height="500px" id="wirewax-player"></iframe> -->
+  <!-- <iframe src="https://embed.wirewax.com/8169359" width="100%" height="500px" id="wirewax-player"></iframe> -->
+  <ul>
+    <li><a href="#" id="ready" onclick="playerReady()">Is Player Ready</a></li>
+    <li><a href="#" id="play" onclick="playVideo()">Play</a></li>
+    <li><a href="#" id="pause" onclick="pauseVideo()">Pause</a></li>
+    <li><a href="#" id="seek" onclick="seekVideo()">Seek</a></li>
+    <li><a href="#" id="gotoTag" onclick="goToTag()">Go To Tag</a></li>
+    <li><a href="#" id="openTag" onclick="openTag()">Open Tag</a></li>
+    <li><a href="#" id="closeOverlay" onclick="closeOverlay()">Close Tag</a></li>
+    <li><a href="#" id="getCurrentTime" onclick="getCurrentTime()">Get Current Time</a></li>
+    <li><a href="#" id="changeVolume" onclick="changeVolume(0)">Change Volume</a></li>
+    <li><a href="#" id="changeVolume1" onclick="changeVolume(0.4)">100% Volume</a></li>
+    <li><a href="#" id="toggleMute" onclick="toggleMute()">Toggle Mute</a></li>
+    <li>
+      <select id="rendition" onchange="changeRendition()">
+        <option value="360">360</option>
+        <option value="540">540</option>
+        <option value="720">720</option>
+        <option value="1080">1080</option>
+        <option value="4k">4k</option>
+      </select>
+
+    </li>
+    <li><button href="#" id="fullscreen" onclick="toggleFullscreen()">Toggle fullscreen</button></li>
+  </ul>
+  <script src="index.js"></script>
 </body>
+
 </html>

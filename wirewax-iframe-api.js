@@ -10,6 +10,8 @@
 
     window.wirewax.playerId = 'wirewax-player';
     window.wirewax.events = {};
+    const url = window.location.href;
+    console.log(url);
 
     window.wirewax.events.listeners = {
         'PLAYER_READY' : 'playerReady',
@@ -44,7 +46,8 @@
         'DEVICE_MOTION': 'deviceMotion',
         'DEVICE_SCREEN_ORIENTATION': 'deviceScreenOrientation',
         'CLIENT_CUSTOM_TRIGGER': 'clientCustomTrigger',
-        'CHANGE_RENDITION': 'changeRendition'
+        'CHANGE_RENDITION': 'changeRendition',
+        'ENTER_FULLSCREEN': 'enterFullscreen',
     };
 
     window.wirewax.renditions = {

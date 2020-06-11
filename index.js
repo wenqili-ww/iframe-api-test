@@ -17,7 +17,7 @@ window.wirewax.addEventListener(window.wirewax.events.listeners.HAS_SEEKED, func
 });
 
 window.wirewax.addEventListener(window.wirewax.events.listeners.TAG_CLICK, function(data) {
-  console.log('Parent window get message: Tag clicked!: ', data);
+  console.log('Parent window get message: Tag clicked!: ', {data});
 });
 
 window.wirewax.addEventListener(window.wirewax.events.listeners.WIDGET_SHOWN, function(data) {
@@ -41,7 +41,7 @@ window.wirewax.addEventListener(window.wirewax.events.listeners.VIDEO_END, funct
 });
 
 window.wirewax.addEventListener(window.wirewax.events.listeners.RETURN_CURRENT_TIME, function(data) {
-  console.log('Parent window get message: Get Current frame: ', data);
+  window.alert(data.data.currentTime);
 });
 
 window.wirewax.addEventListener(window.wirewax.events.listeners.ADD_TO_CART, function(eventData){
@@ -71,11 +71,11 @@ window.wirewax.triggerEvent(window.wirewax.events.triggers.SEEK, 3);
 }
 
 window.goToTag = function() {
-  window.wirewax.triggerEvent(window.wirewax.events.triggers.GO_TO_TAG, 5490840);
+  window.wirewax.triggerEvent(window.wirewax.events.triggers.GO_TO_TAG, 5351044);
 }
 
 window.openTag = function() {
-  window.wirewax.triggerEvent(window.wirewax.events.triggers.OPEN_TAG, 5490840);
+  window.wirewax.triggerEvent(window.wirewax.events.triggers.OPEN_TAG, 5351044);
 }
 
 window.closeOverlay = function() {
@@ -97,6 +97,10 @@ window.toggleMute = function() {
   } else {
 		window.wirewax.triggerEvent(window.wirewax.events.triggers.UNMUTE_VOLUME, isMute);
   }
+}
+
+window.toggleFullscreen = function() {
+	window.wirewax.triggerEvent(window.wirewax.events.triggers.ENTER_FULLSCREEN);  
 }
 
 window.changeRendition = function() {
